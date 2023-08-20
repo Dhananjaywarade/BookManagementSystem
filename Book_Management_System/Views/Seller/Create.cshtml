@@ -1,0 +1,49 @@
+﻿@{
+    Layout = null;
+}
+
+<!DOCTYPE html>
+
+<html>
+<head>
+    <meta name="viewport" content="width=device-width" />
+    <link href="~/Content/bootstrap.min.css" rel="stylesheet" />
+    <script src="~/Scripts/bootstrap.min.js"></script>
+    <title></title>
+</head>
+<body>
+    <div class="container">
+        <h1>Add Book</h1>
+        <form action="/Seller/Create" method="post">
+            <table class="table table-bordered table-light">
+                <tr>
+                    <td>User Id</td>
+                    <td><input type="number" name="user_id" value="" /></td>
+                </tr>
+                <tr>
+                    <td>Book Name</td>
+                    <td><input type="text" name="book_name" value="" /></td>
+                </tr>
+                <tr>
+                    <td>Author</td>
+                    <td><input type="text" name="author" value="" /></td>
+                </tr>
+                <tr>
+                    <td>Category</td>
+                    <td><input type="text" name="category" value="" /></td>
+                </tr>
+                <tr>
+                <tr>
+                    <td>Price</td>
+                    <td><input type="number" name="price" value="" /></td>
+                </tr>
+                <tr>
+                    <td>
+                        <input type="submit" class="btn btn-outline-info" name="btnAddBook" value="Add Book" />
+                    </td>
+                </tr>
+            </table>
+        </form>
+    </div>
+</body>
+</html>

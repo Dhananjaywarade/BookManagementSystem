@@ -1,0 +1,66 @@
+﻿
+@{
+    Layout = null;
+}
+@model List<karad.Models.book>
+<!DOCTYPE html>
+
+<html>
+<head>
+    <meta name="viewport" content="width=device-width" />
+    <link href="~/Content/bootstrap.min.css" rel="stylesheet" />
+    <script src="~/Scripts/bootstrap.min.js"></script>
+    <title>Index</title>
+</head>
+<body>
+    <div class="container">
+        <div style="float:right">
+           @ViewBag.message <a href="/Seller/LogOut" class="btn btn-outline-danger">Log Out</a>
+        </div>
+        <a href="/Seller/Create" class="btn btn-outline-warning">Add Book</a>
+        <table class="table table-bordered">
+            <thead>
+                <tr>
+                    <th scope="col">Id</th>
+                    <th scope="col">Book Name</th>
+                    <th scope="col">Author</th>
+                    <th scope="col">Category</th>
+                    <th scope="col">Price</th>
+                    <th colspan="2" scope="col">Actions</th>
+
+                </tr>
+            </thead>
+
+
+            <tbody>
+                @foreach (var book in Model)
+                {
+                    <tr>
+                        <td>
+                            @book.book_id
+                        </td>
+                        <td>
+                            @book.book_name
+                        </td>
+                        <td>
+                            @book.author
+                        </td>
+                        <td>
+                            @book.category
+                        </td>
+                        <td>
+                            @book.price
+                        </td>
+                        <td>
+                            <a class="btn btn-outline-success" href="/Seller/Edit/@book.book_id">Update</a>
+                        </td>
+                        <td>
+                            <a class="btn btn-outline-secondary" href="/Seller/Delete/@book.book_id">Delete</a>
+                        </td>
+                    </tr>
+                }
+            </tbody>
+        </table>
+    </div>
+</body>
+</html>

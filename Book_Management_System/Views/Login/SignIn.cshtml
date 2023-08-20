@@ -1,0 +1,35 @@
+﻿@{
+    Layout = null;
+}
+
+<!DOCTYPE html>
+
+<html>
+<head>
+    <meta name="viewport" content="width=device-width" />
+    <link href="~/Content/bootstrap.min.css" rel="stylesheet" />
+    <script src="~/Scripts/bootstrap.min.js"></script>
+    <title></title>
+</head>
+<body>
+    <div class="container"">
+        <h1>Book Shop Management System</h1>
+        <form action="/Login/SignIn" method="post">
+            <table class="table table-responsive">
+                <tr>
+                    <td>Email</td>
+                    <td><input type="email" name="email" value="" /></td>
+                </tr>
+                <tr>
+                    <td>Password</td>
+                    <td><input type="password" name="password" value="" /></td>
+                </tr>
+                <tr>
+                    <td><input type="submit" class="btn btn-outline-success" name="btnSubmit" value="Log In" /></td>
+                </tr>
+            </table>
+        </form>
+    </div>
+    <div>@ViewBag.Message</div>
+</body>
+</html>

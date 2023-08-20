@@ -1,0 +1,44 @@
+﻿@{
+    Layout = null;
+}
+
+<!DOCTYPE html>
+
+<html>
+<head>
+    <meta name="viewport" content="width=device-width" />
+    <link href="~/Content/bootstrap.min.css" rel="stylesheet" />
+    <script src="~/Scripts/bootstrap.min.js"></script>
+    <title></title>
+</head>
+<body>
+    <div class="container">
+        <h1>Add Seller</h1>
+        <form action="/Admin/Create" method="post">
+            <table class="table table-bordered table-light">
+                <tr>
+                    <td>Uname</td>
+                    <td><input type="text" name="username" value="" /></td>
+                </tr>
+                <tr>
+                    <td>Email</td>
+                    <td><input type="email" name="email" value="" /></td>
+                </tr>
+                <tr>
+                    <td>Mobile_No</td>
+                    <td><input type="text" name="mobile_no" value="" /></td>
+                </tr>
+                <tr>
+                    <td>Password</td>
+                    <td><input type="password" name="password" value="" /></td>
+                </tr>
+                <tr>
+                    <td>
+                        <input type="submit" class="btn btn-outline-info" name="btnAddSeller" value="Add Seller" />
+                    </td>
+                </tr>
+            </table>
+        </form>
+    </div>
+</body>
+</html>

@@ -1,0 +1,42 @@
+﻿@{
+    Layout = null;
+}
+@model karad.Models.book
+<!DOCTYPE html>
+
+<html>
+<head>
+    <meta name="viewport" content="width=device-width" />
+    <link href="~/Content/bootstrap.min.css" rel="stylesheet" />
+    <script src="~/Scripts/bootstrap.min.js"></script>
+    <title></title>
+</head>
+<body>
+    <div class="container">
+        <form action="/Seller/Edit" method="post">
+            <table class="table table-responsive">
+                <input type="hidden" name="book_id" value="@Model.book_id" />
+                <tr>
+                    <td>Book Name</td>
+                    <td><input type="text" name="book_name" value="@Model.book_name" /></td>
+                </tr>
+                <tr>
+                    <td>Author</td>
+                    <td><input type="text" name="author" value="@Model.author" /></td>
+                </tr>
+                <tr>
+                    <td>Category</td>
+                    <td><input type="text" name="category" value="@Model.category" /></td>
+                </tr>
+                <tr>
+                    <td>Price</td>
+                    <td><input type="number" name="price" value="@Model.price" /></td>
+                </tr>
+                <tr>
+                    <td><input class="btn btn-outline-secondary" type="submit" name="btnUpdate" value="Update " /></td>
+                </tr>
+            </table>
+        </form>
+    </div>
+</body>
+</html>
